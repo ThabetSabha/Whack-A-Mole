@@ -86,4 +86,15 @@ button {
 .time-up{
   margin-top:2rem ;
   font-size: 3rem;
+  min-height: 3rem;
+}
+
+.hideButton{
+  display: none;
+}
+
+.buttonDiv{
+  min-height: 9rem;
+  padding: 0;
+  margin: 0;
 }

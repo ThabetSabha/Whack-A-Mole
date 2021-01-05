@@ -1,7 +1,9 @@
     const holes = document.querySelectorAll('.hole');
     const scoreBoard = document.querySelector('.score');
     const moles = document.querySelectorAll('.mole');
-    const timeUpDiv = document.querySelector(".time-up")
+    const timeUpDiv = document.querySelector(".time-up");
+    const startButton = document.querySelector(".startButton");
+
     let lastHole;
     let timeUp = false;
     let score = 0;
@@ -33,14 +35,16 @@
     }
 
     function startGame() {
-        score = 0;
+      startButton.classList.add("hideButton");
+      score = 0;
       timeUp = false;
       timeUpDiv.textContent = ""
       scoreBoard.textContent = 0;
       peep();
       setTimeout(() => {
         timeUp = true;
-        timeUpDiv.textContent = "Game Over!"
+        timeUpDiv.textContent = "Game Over!";
+        startButton.classList.remove("hideButton");
       }, 10000)
 
     }
